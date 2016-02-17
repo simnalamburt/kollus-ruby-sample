@@ -4,7 +4,8 @@ kollus-ruby-sample
 [Click to see working sample](https://kollus.hyeon.me)
 
 ```bash
-gem install sinatra
+# http://bundler.io/
+bundle
 
 # Use your own API token
 cp secret.yml.example secret.yml

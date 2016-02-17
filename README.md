@@ -10,6 +10,9 @@ gem install sinatra
 cp secret.yml.example secret.yml
 vim secret.yml
 
-./run
 # See http://localhost:4567
+./run
+
+# On production
+RACK_ENV=production ./run
 ```

@@ -1,0 +1,15 @@
+[Unit]
+Description=kollus-ruby sample server
+
+[Service]
+SyslogIdentifier=kollus-unicorn
+User=simnalamburt
+WorkingDirectory=/home/simnalamburt/kollus-ruby-sample/etc
+PIDFile=/home/simnalamburt/kollus-ruby-sample/tmp/pid
+
+ExecStart=/home/simnalamburt/.gem/ruby/2.3.0/bin/unicorn -D -c unicorn.rb -E production
+ExecReload=/bin/kill -s USR2 $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

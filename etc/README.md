@@ -5,7 +5,7 @@ Production Guidelines
 ```shell
 sudo mkdir /var/run/kollus
 sudo chown simnalamburt:simnalamburt /var/run/kollus
-sudo ln -s "$PWD/kollus.service" /etc/systemd/system/
+sudo cp kollus.service /etc/systemd/system/
 sudo systemctl daemon-reload
 
 sudo systemctl enable kollus

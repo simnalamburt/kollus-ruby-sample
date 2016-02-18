@@ -4,8 +4,8 @@ Description=kollus-ruby sample server
 [Service]
 SyslogIdentifier=kollus-unicorn
 User=simnalamburt
-WorkingDirectory=/home/simnalamburt/kollus-ruby-sample/etc
-PIDFile=/home/simnalamburt/kollus-ruby-sample/tmp/pid
+WorkingDirectory=/home/simnalamburt/services/kollus/etc
+PIDFile=/home/simnalamburt/services/kollus/tmp/pid
 
 PermissionsStartOnly=true
 ExecStartPre=-/usr/bin/mkdir -p /var/run/kollus

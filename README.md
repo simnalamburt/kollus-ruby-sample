@@ -1,8 +1,6 @@
 kollus-ruby-sample
 ========
 
-[Click to see working sample](https://kollus.hyeon.me)
-
 ```bash
 # http://bundler.io/
 bundle

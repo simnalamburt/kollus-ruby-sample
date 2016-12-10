@@ -5,14 +5,17 @@ require 'tilt/erb'
 require 'kollus'
 
 path_secret = File.join File.dirname(__FILE__), 'secret.yml'
-token = YAML.load_file(path_secret)['api_token']
+config = YAML.load_file(path_secret)
 
-kollus = Kollus.new 'test', 'catenoid-sample', token
+set :bind, config['bind']
+set :port, config['port']
+
+kollus = Kollus.new config['account_key'], config['api_token']
 
 get '/' do
-  @media1 = kollus.media '7MscjbVl'
-  @media2 = kollus.media 'Kcrbjc2S'
-  @upload = kollus.upload
+  @media1 = kollus.media config['media1_key'], 'test'
+  @media2 = kollus.media config['media2_key'], 'test'
+  @upload = kollus.upload config['category_key']
 
   erb :index
 end

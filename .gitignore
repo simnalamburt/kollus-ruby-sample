@@ -1,3 +1,9 @@
+# Ignore dependencies
+/.bundle/lib/
+
+# Hide secret keys
 /secret.yml
+
+# Ignore temporal files
 /tmp/*
 !.keep

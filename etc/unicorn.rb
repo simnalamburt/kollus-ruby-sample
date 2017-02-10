@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 @tmp = File.expand_path('../../tmp', __FILE__)
 def tmp(name); File.join(@tmp, name) end
 
